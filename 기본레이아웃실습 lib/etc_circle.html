@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../assets/js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <style>
+        body {background:#333;}
+        span, em {display:block;position:absolute;top:50%;left:50%;}
+        .circle {position:absolute;top:50%;left:50%;width:600px;height:600px;border-radius:50%;box-shadow:2px 2px 0 rgba(255,255,255,0.3),-2px 2px 0 rgba(255,255,255,0.3);overflow: hidden;animation: won 5s infinite linear;}
+        span {width:300px;height:300px;box-shadow:0 -2px 0 rgba(255,255,255,0.3),2px 2px 0 rgba(255,255,255,0.3);border-radius:50%;animation: won 3s infinite linear;}
+        em {width:20px;height:20px;background:rgba(255,255,255,0.6);border-radius:50%;transform:translate(-50%,-50%)}
+
+        @keyframes won {
+            0% {transform:translate(-50%,-50%) rotate(0);}
+            100% {transform:translate(-50%,-50%) rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <span>
+            <em></em>
+        </span>
+    </div>
+    <script>
+        $(function(){
+
+        });
+    </script>
+</body>
+</html>

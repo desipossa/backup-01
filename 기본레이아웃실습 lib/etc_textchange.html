@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../assets/js/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <ul class="gnb">
+        <li><a href="#!" data-on="메뉴01" data-off="menu01">menu01</a></li>
+        <li><a href="#!" data-on="메뉴02" data-off="menu02">menu01</a></li>
+        <li><a href="#!" data-on="메뉴03" data-off="menu03">menu01</a></li>
+        <li><a href="#!" data-on="메뉴04" data-off="menu04">menu01</a></li>
+    </ul>
+    <script>
+        $(function(){
+            $(".gnb>li>a").hover(
+                function(){
+                    this_txt=$(this).data("off");
+                    hover_txt=$(this).data("on");
+                    $(this).text(hover_txt);
+                },
+                function(){
+                    $(this).text(this_txt);
+                }
+            )
+        });
+    </script>
+</body>
+</html>
